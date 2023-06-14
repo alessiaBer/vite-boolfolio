@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Karla', sans-serif;
+    overflow-x: hidden;
 }
 
 .container {
@@ -15,10 +16,17 @@ body {
     }
 }
 
-.card {
+.project_container {
     font-family: 'Inconsolata', monospace;
+    border: 1px solid grey;
     img {
         height: 200px;
         
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 70%;
     }
 }
