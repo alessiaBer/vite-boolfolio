@@ -4,6 +4,7 @@ export default {
   data() {
     return {
       project: null,
+      results: null,
       base_api: "http://127.0.0.1:8000/api/projects/",
     }
   },
@@ -12,6 +13,7 @@ export default {
     axios
     .get(url)
     .then(response => {
+      this.results = response.data.success
       this.project = response.data.result
     })
     .catch(error => {
@@ -21,8 +23,12 @@ export default {
 };
 </script>
 <template>
-  <div class="container">
+  <div class="container" v-if="this.results">
     <h1>{{ project.title }}</h1>
+  </div>
+  <div class="container text-center" v-else>
+    <h1>\(o_o)/</h1>
+    <p>Project not Found</p>
   </div>
 </template>
 
