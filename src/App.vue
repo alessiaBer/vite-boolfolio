@@ -1,7 +1,10 @@
 <script>
 import axios from "axios";
+import AppHeader from "./components/AppHeader.vue"
 export default {
-  components: {},
+  components: {
+    AppHeader
+  },
   data() {
     return {
       base_api: "http://127.0.0.1:8000",
@@ -24,12 +27,19 @@ export default {
 </script>
 
 <template>
+  <AppHeader />
   <div class="container">
     <h1>My projects</h1>
     <div class="row">
       <div class="col-12" v-for="project in projects">
-        <div class="card">
-          <h2>{{ project.title }}</h2>
+        <div class="card d-flex">
+            <div class="card_left">
+                <img :src="base_api + '/storage/' + project.project_image" :alt="project.title">
+            </div>
+            <div class="card_right">
+                <h2>{{ project.title }}</h2>
+                <p>{{ project.description }}</p>
+            </div>
         </div>
       </div>
     </div>
