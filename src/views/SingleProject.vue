@@ -13,8 +13,13 @@ export default {
     axios
     .get(url)
     .then(response => {
-      this.results = response.data.success
-      this.project = response.data.result
+      if(response.data.success) {
+        this.project = response.data.result
+      } else {
+        this.$router.push({
+          name: 'project-not-found',
+          params: {pathMatch: this.$route.path.substring(1).split('/')}})
+      }
     })
     .catch(error => {
       console.error(error)
@@ -23,13 +28,13 @@ export default {
 };
 </script>
 <template>
-  <div class="container" v-if="this.results">
+  <div class="container" v-if="project">
     <h1>{{ project.title }}</h1>
   </div>
-  <div class="container text-center" v-else>
+  <!-- <div class="container text-center" v-else>
     <h1>\(o_o)/</h1>
     <p>Project not Found</p>
-  </div>
-</template>
+  </div>-->
+</template> 
 
 <style lang="sass" scoped></style>
