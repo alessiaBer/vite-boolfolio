@@ -31,10 +31,6 @@ export default {
   <div class="container" v-if="project">
     <h1>{{ project.title }}</h1>
   </div>
-  <!-- <div class="container text-center" v-else>
-    <h1>\(o_o)/</h1>
-    <p>Project not Found</p>
-  </div>-->
 </template> 
 
 <style lang="sass" scoped></style>
