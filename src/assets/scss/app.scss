@@ -1,1 +1,19 @@
 @use '/node_modules/bootstrap/scss/bootstrap.scss' as *;
+
+body {
+    font-family: 'Karla', sans-serif;
+}
+
+
+.navbar {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+}
+
+.card {
+    img {
+        height: 200px;
+        
+    }
+}
