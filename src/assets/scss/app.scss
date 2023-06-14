@@ -4,6 +4,10 @@ body {
     font-family: 'Karla', sans-serif;
 }
 
+.container {
+    padding: 2rem 0;
+}
+
 
 .navbar {
     .navbar-brand {
@@ -12,6 +16,7 @@ body {
 }
 
 .card {
+    font-family: 'Inconsolata', monospace;
     img {
         height: 200px;
         
