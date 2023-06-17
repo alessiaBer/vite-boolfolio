@@ -28,9 +28,11 @@ export default {
 };
 </script>
 <template>
+<main>
   <div class="container" v-if="project">
     <h1>{{ project.title }}</h1>
   </div>
+</main>
 </template> 
 
 <style lang="sass" scoped></style>

@@ -22,6 +22,7 @@ export default {
 };
 </script>
 <template>
+<main>
   <div class="container projects_container">
     <h1 class="pb-4">My projects</h1>
     <div class="row">
@@ -48,6 +49,8 @@ export default {
       </div>
     </div>
   </div>
+</main>
+  
 </template>
 
 <style lang="sass" scoped></style>
