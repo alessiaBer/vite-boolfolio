@@ -2,7 +2,6 @@
 
 body {
     overflow-x: hidden;
-    font-family: 'Helvetica', sans-serif; 
 }
 
 .header_link {
@@ -21,6 +20,7 @@ body {
 
 header {
     /* background-color: #d85b8d; */
+    font-family: 'DM Sans', sans-serif;
     background-color: #d890f3;
     .navbar {
         height: 78px;
@@ -34,7 +34,6 @@ header {
 main {
     background-color: #d890f3;
     min-height: calc(100vh - 78px);
-    /* background-image: url('../img/svg.png'); */
     background-image: url('../img/svg\ \(1\).png');
     background-repeat: no-repeat;
     background-position: bottom;
@@ -51,12 +50,28 @@ main {
 }
 
 .projects_container {
-    .project_container {
-        background-color: rgba(255, 255, 255, 0.735);
-        img {
-            height: 200px;
-            
-        }
+    h1 {
+        font-family: 'DM Serif Display', serif; 
+        font-size: 2.5rem;
+        letter-spacing: 0.2rem;
+    }
+    .project_container.proj_with_bg {
+        background-color: #ffffff8f;
+    }
+    img {
+        height: 200px;
+        width: 300px;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 5px;
+    }
+    h2 {
+        font-family: 'DM Serif Display', serif; 
+        font-size: 2rem;
+        letter-spacing: 0.2rem;
+    }
+    p {
+        font-family: 'DM Sans', sans-serif;
     }
 }
 
@@ -64,16 +79,29 @@ footer {
     background-color: #ff0080;
 }
 
-@media screen and (min-width: 1200px) {
-    .container {
-        width: 70%;
-    }
+@media screen and (min-width: 768px) {
     .navbar-brand, .resume_btn {
         width: 240px;
     
     }
-    
+    .project_container {
+        height: 400px;
+        .img_wrapper {
+            width: 480px;
+            .second-img {
+                top: 120px;
+                left: 180px;
+            }
+        }
+    }
     .resume_btn {
         text-align: end;
     }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 70%;
+    }
+    
 }

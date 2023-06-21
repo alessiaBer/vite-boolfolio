@@ -11,7 +11,7 @@ export default {};
         <router-link :to="{'name': 'projects'}" class="btn_proj btn btn-dark py-2 px-4 text-white">
           Take a look at my projects!
         </router-link>
-        <router-link :to="{'name': 'projects'}" class="btn_proj btn btn-light py-2 px-4 text-dark ms-2">
+        <router-link :to="{'name': 'contacts'}" class="btn_proj btn btn-light py-2 px-4 text-dark ms-2">
           Contact me
         </router-link>
       </div>
