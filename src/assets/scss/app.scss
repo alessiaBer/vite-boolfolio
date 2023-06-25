@@ -2,6 +2,7 @@
 
 body {
     overflow-x: hidden;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .header_link {
@@ -21,7 +22,8 @@ body {
 header {
     /* background-color: #d85b8d; */
     font-family: 'DM Sans', sans-serif;
-    background-color: #d890f3;
+    /* background-color: #d890f3; */
+    background-color: #a1c2d1;
     .navbar {
         height: 78px;
         .navbar-brand {
@@ -32,31 +34,42 @@ header {
 }
 
 main {
-    background-color: #d890f3;
+    /* background-color: #d890f3; */
+    background-color: #a1c2d1;
     min-height: calc(100vh - 78px);
-    background-image: url('../img/svg\ \(1\).png');
+    /* background-image: url('../img/svg\ \(1\).png'); */
+    background-image: url('../img/Wave (1).svg');
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: top;
+    background-size: cover;
+    padding-bottom: 3rem;
 }
 
 .jumbotron {
-    .btn_proj {
+    padding-top: 6rem;
+    h1 {
+        font-size: 5rem;
+        .sub_letter {
+            margin-top: 1rem;
+        }
+    }
+    /* .btn_proj {
         text-decoration: none;
         border-top-left-radius: 1.5rem;
         border-bottom-left-radius: 1.5rem;
         border-top-right-radius: 1.5rem;
         border-bottom-right-radius: 1.5rem;
-    }
+    } */
 }
 
 .projects_container {
     h1 {
-        font-family: 'DM Serif Display', serif; 
         font-size: 2.5rem;
         letter-spacing: 0.2rem;
     }
     .project_container.proj_with_bg {
         background-color: #ffffff8f;
+        color: #ad2e95;
     }
     img {
         height: 200px;
@@ -66,17 +79,36 @@ main {
         border-radius: 5px;
     }
     h2 {
-        font-family: 'DM Serif Display', serif; 
         font-size: 2rem;
         letter-spacing: 0.2rem;
     }
-    p {
-        font-family: 'DM Sans', sans-serif;
+}
+
+.single_project {
+    h1 {
+        letter-spacing: 0.2rem;
+    }
+    .single_proj_left,
+    .single_proj_right {
+        width: 50%;
+    }
+    .technologies {
+        li {
+            width: 60px;
+            aspect-ratio: 1 / 1;
+            background-color: #ffffff8f;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 0.5rem;
+        }
     }
 }
 
 footer {
-    background-color: #ff0080;
+    /* background-color: #ff0080; */
+    background-color: #E64298;
 }
 
 @media screen and (min-width: 768px) {
@@ -97,11 +129,36 @@ footer {
     .resume_btn {
         text-align: end;
     }
+    .single_project {
+        &.container {
+            width: 70%;
+        }
+        .single_proj_left, 
+        .single_proj_right {
+            width: 50%;
+        }
+        .proj_preview {
+            img {
+                width: 400px;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 1200px) {
     .container {
         width: 70%;
     }
-    
+}
+@media screen and (min-width: 1200px) {
+    .single_project {
+        .proj_preview {
+            img {
+                width: 450px;
+                height: 500px;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+    }
 }

@@ -35,7 +35,7 @@ export default {
     <div class="projects_container">
       <div class="container pb-0">
 
-        <h1 class="text-uppercase mb-0">Projects</h1>
+        <h1 class="text-uppercase mb-0 text-white">Projects</h1>
       </div>
       <div class="row" v-if="projects.length > 0">
         <div class="col-12" v-for="(project, index) in projects">
@@ -72,11 +72,11 @@ export default {
             <div class="container d-flex flex-column flex-md-row">
 
               <div class=" text-end pe-md-3 flex-grow-1 d-flex flex-column justify-content-center">
-                <h2 class="text-uppercase fw-bold">{{ project.title }}</h2>
-                <p>{{ project.description }}</p>
+                <h2 class="text-uppercase fw-bold text-white">{{ project.title }}</h2>
+                <p class="text-white">{{ project.description }}</p>
                 <router-link
                 :to="{ name: 'single-project', params: { slug: project.slug } }"
-                class="nav-link"
+                class="nav-link text-white"
                 >
                 More info
                 </router-link>
