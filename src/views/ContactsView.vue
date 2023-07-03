@@ -3,7 +3,7 @@ import axios from 'axios';
 export default {
   data() {
     return {
-      api: 'http://127.0.0.1:8000/api/contacts',
+      api: `${import.meta.env.VITE_HOST}/api/contacts`,
       name: '',
       address: '',
       mailContent: '',

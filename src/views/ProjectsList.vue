@@ -3,7 +3,7 @@ import axios from "axios";
 export default {
   data() {
     return {
-      base_api: "http://127.0.0.1:8000",
+      base_api: import.meta.env.VITE_HOST,
       projects_api: "/api/projects",
       projects: [],
     };

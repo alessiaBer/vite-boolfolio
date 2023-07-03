@@ -6,8 +6,8 @@ export default {
         return {
             project: null,
             results: null,
-            base_api: "http://127.0.0.1:8000/api/projects/",
-            base: "http://127.0.0.1:8000"
+            base_api: `${import.meta.env.VITE_HOST}/api/projects/`,
+            base: import.meta.env.VITE_HOST
         };
     },
     methods: {
