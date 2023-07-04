@@ -6,6 +6,7 @@ export default {
       base_api: import.meta.env.VITE_HOST,
       projects_api: "/api/projects",
       projects: [],
+      image_path: import.meta.env.VITE_IMAGES_PATH
     };
   },
   methods: {
@@ -45,11 +46,11 @@ export default {
 
               <div class="img_wrapper position-relative flex-shrink-0">
                 <img
-                  :src="base_api + '/storage/' + project.project_image"
+                  :src="base_api + image_path + project.project_image"
                   :alt="project.title"
                 />
                 <img
-                  :src="base_api + '/storage/' + project.second_img"
+                  :src="base_api + image_path + project.second_img"
                   :alt="project.title"
                   class="second-img position-absolute d-none d-md-inline-block"
                   v-if="project.second_img"
@@ -83,13 +84,13 @@ export default {
               </div>
               <div class="img_wrapper position-relative flex-shrink-0">
                 <img
-                  :src="base_api + '/storage/' + project.second_img"
+                  :src="base_api + image_path + project.second_img"
                   :alt="project.title"
                   class="second-img position-absolute d-none d-md-inline-block"
                   v-if="project.second_img"
                 />
                 <img
-                  :src="base_api + '/storage/' + project.project_image"
+                  :src="base_api + image_path + project.project_image"
                   :alt="project.title"
                 />
               </div>

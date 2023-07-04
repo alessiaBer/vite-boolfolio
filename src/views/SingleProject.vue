@@ -7,7 +7,8 @@ export default {
             project: null,
             results: null,
             base_api: `${import.meta.env.VITE_HOST}/api/projects/`,
-            base: import.meta.env.VITE_HOST
+            base: import.meta.env.VITE_HOST,
+            image_path: import.meta.env.VITE_IMAGES_PATH
         };
     },
     methods: {
@@ -45,10 +46,10 @@ export default {
       <h1 class="text-uppercase">{{ project.title }}</h1>
       <div class="proj_preview">
         <div class="first_img">
-          <img :src="base + '/storage/' + project.project_image" :alt="project.title" width="300">
+          <img :src="base + image_path + project.project_image" :alt="project.title" width="300">
         </div>
         <div class="second_img">
-          <img v-if="project.second_img" :src="base + '/storage/' + project.second_img" :alt="project.title" width="300" class="d-none">
+          <img v-if="project.second_img" :src="base + image_path + project.second_img" :alt="project.title" width="300" class="d-none">
         </div>
       </div>
     </div>
