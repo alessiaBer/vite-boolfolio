@@ -36,21 +36,23 @@ header {
 main {
     /* background-color: #d890f3; */
     background-color: #a1c2d1;
-    min-height: calc(100vh - 78px);
+    min-height: calc((100vh - 78px) + 126px);
     /* background-image: url('../img/svg\ \(1\).png'); */
     background-image: url('../img/Wave (1).svg');
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
     padding-bottom: 3rem;
+    margin-bottom: -126px;
+    padding-bottom: 7rem;
 }
 
 .jumbotron {
     padding-top: 6rem;
     h1 {
-        font-size: 5rem;
+        font-size: 3rem;
         .sub_letter {
-            margin-top: 1rem;
+            margin-bottom: -2rem;
         }
     }
     /* .btn_proj {
@@ -107,20 +109,32 @@ main {
 }
 
 .contacts {
+    .confirm {
+        width: fit-content;
+        padding: 1rem;
+        background-color: #ffffff8f;
+    }
     h1 {
-        letter-spacing: 0.2rem;
+        letter-spacing: 0.3rem;
     }
 }
 
 footer {
     /* background-color: #ff0080; */
-    background-color: #E64298;
+    background-color: transparent;
 }
 
 @media screen and (min-width: 768px) {
     .navbar-brand, .resume_btn {
         width: 240px;
     
+    }
+    .jumbotron {
+
+        h1 {
+            font-size: 5rem;
+            letter-spacing: 0.4rem;
+        }
     }
     .project_container {
         height: 400px;

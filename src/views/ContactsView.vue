@@ -42,10 +42,10 @@ export default {
 <template>
 <main>
 
-  <div class="container contacts">
+  <div class="container contacts px-2 px-md-0">
     <h1 class="text-uppercase text-white pb-3">Contacts</h1>
-    <div class="confirm" v-if="mailSended">Messaggio inviato</div>
-    <p class="text-white">Do you want to contact me? Please fill the form below!</p>
+    <div class="confirm" v-if="mailSended">Message sended successfully!</div>
+    <p class="text-white pt-4">Do you want to contact me? Please fill the form below!</p>
     <form @submit.prevent="sendMail()">
       <div class="col">
         <div class="mb-3">
