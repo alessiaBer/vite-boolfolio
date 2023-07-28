@@ -1,8 +1,12 @@
 @use '/node_modules/bootstrap/scss/bootstrap.scss' as *;
 
 body {
-    overflow-x: hidden;
     font-family: 'DM Sans', sans-serif;
+}
+
+#app {
+    overflow-x:hidden;
+    
 }
 
 .header_link {
@@ -16,8 +20,10 @@ body {
 }
 
 .container {
-    padding: 2rem 0;
+    padding: 2rem 1rem;
 }
+
+
 
 header {
     /* background-color: #d85b8d; */
@@ -55,13 +61,7 @@ main {
             margin-bottom: -2rem;
         }
     }
-    /* .btn_proj {
-        text-decoration: none;
-        border-top-left-radius: 1.5rem;
-        border-bottom-left-radius: 1.5rem;
-        border-top-right-radius: 1.5rem;
-        border-bottom-right-radius: 1.5rem;
-    } */
+
 }
 
 .projects_container {
@@ -88,12 +88,12 @@ main {
 
 .single_project {
     h1 {
-        letter-spacing: 0.2rem;
-    }
+        letter-spacing: 0.4rem;
+    }/* 
     .single_proj_left,
     .single_proj_right {
-        width: 50%;
-    }
+        width: 100%;
+    } */
     .technologies {
         li {
             width: 60px;
@@ -124,10 +124,19 @@ footer {
     background-color: transparent;
 }
 
+@media screen and (min-width: 400px) {
+    .lastname {
+        letter-spacing: 0.5rem;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .navbar-brand, .resume_btn {
         width: 240px;
     
+    }
+    .lastname {
+        letter-spacing: 1.7rem;
     }
     .jumbotron {
 
@@ -137,7 +146,7 @@ footer {
         }
     }
     .project_container {
-        height: 400px;
+        height: 500px;
         .img_wrapper {
             width: 480px;
             .second-img {
@@ -151,11 +160,11 @@ footer {
     }
     .single_project {
         &.container {
-            width: 70%;
+            width: 100%;
         }
         .single_proj_left, 
         .single_proj_right {
-            width: 50%;
+            width: 100%;
         }
         .proj_preview {
             img {

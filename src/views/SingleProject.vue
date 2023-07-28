@@ -40,11 +40,11 @@ export default {
 </script>
 <template>
 <main>
-  <div class="container text-white single_project d-flex flex-column flex-md-row" v-if="project">
+  <div class="container text-white single_project d-flex flex-column flex-lg-row" v-if="project">
     <div class="single_proj_left w-100">
 
-      <h1 class="text-uppercase">{{ project.title }}</h1>
-      <div class="proj_preview">
+      <h1 class="text-uppercase pb-4">{{ project.title }}</h1>
+      <div class="proj_preview d-none d-lg-block">
         <div class="first_img">
           <img :src="base + image_path + project.project_image" :alt="project.title" width="300">
         </div>
@@ -64,7 +64,7 @@ export default {
           </li>
         </ul>
       </div>
-      <div class="description pt-4">
+      <div class="description pt-4 w-100">
         <p>{{ project.description }}</p>
       </div>
       <div class="live_source text-uppercase">

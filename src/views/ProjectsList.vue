@@ -42,7 +42,7 @@ export default {
         <div class="col-12" v-for="(project, index) in projects">
           <div style="height: 70px; overflow: hidden;" v-if="index % 2 === 0"><svg viewBox="0 80 500 70" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-0.27,121.88 C128.38,65.63 335.50,149.52 517.77,98.20 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #ffffff8f;"></path></svg></div>
           <div class="project_container proj_with_bg d-md-flex p-2" v-if="index % 2 === 0">
-            <div class="container d-flex flex-column flex-md-row">
+            <div class="container d-flex flex-column flex-lg-row">
 
               <div class="img_wrapper position-relative flex-shrink-0">
                 <img
@@ -52,12 +52,12 @@ export default {
                 <img
                   :src="base_api + image_path + project.second_img"
                   :alt="project.title"
-                  class="second-img position-absolute d-none d-md-inline-block"
+                  class="second-img position-absolute d-none d-lg-inline-block"
                   v-if="project.second_img"
                 />
               </div>
               <div class="card_right ps-md-3 d-flex flex-column justify-content-center text-end flex-grow-1 pe-3">
-                <h2 class="text-uppercase fw-bold">{{ project.title }}</h2>
+                <h2 class="text-uppercase fw-bold pt-4 pt-md-0">{{ project.title }}</h2>
                 <p>{{ project.description }}</p>
                 <router-link
                   :to="{ name: 'single-project', params: { slug: project.slug } }"
@@ -70,7 +70,7 @@ export default {
           </div>
           <div style="height: 70px; overflow: hidden;" v-if="index % 2 === 0"><svg viewBox="0 0 500 70" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-1.12,36.03 C145.03,-20.20 381.49,112.02 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: #ffffff8f;"></path></svg></div>
           <div class="project_container d-md-flex p-2 ms-auto" v-else>
-            <div class="container d-flex flex-column flex-md-row">
+            <div class="container d-flex flex-column flex-lg-row">
 
               <div class=" text-end pe-md-3 flex-grow-1 d-flex flex-column justify-content-center">
                 <h2 class="text-uppercase fw-bold text-white">{{ project.title }}</h2>
@@ -86,7 +86,7 @@ export default {
                 <img
                   :src="base_api + image_path + project.second_img"
                   :alt="project.title"
-                  class="second-img position-absolute d-none d-md-inline-block"
+                  class="second-img position-absolute d-none d-lg-inline-block"
                   v-if="project.second_img"
                 />
                 <img

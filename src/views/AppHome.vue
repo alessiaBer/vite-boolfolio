@@ -6,7 +6,7 @@ export default {};
   <div class="jumbotron pt-5 text-white">
     <div class="container pt-5">
       <div class="jumbo_text ps-3 ps-md-0">
-        <h1 class="py-5">Hi, I'm ALESSIA BERTINATO</h1>
+        <h1 class="py-5">Hi, I'm ALESSIA <span class="lastname">BERTINATO</span></h1>
         <h3 class="pb-3 pt-5">I'm a Junior Fullstack Developer to be.</h3>
 
         <router-link :to="{'name': 'projects'}" class="py-2 text-white d-block d-md-inline-block text-decoration-none">
