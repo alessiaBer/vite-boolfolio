@@ -21,7 +21,7 @@ export default {
       </ul>
 
       <div class="resume_btn">
-        <a href="#" class="text-white">Resume</a>
+        <a href="https://www.linkedin.com/in/alessia-bertinato/overlay/1635532217187/single-media-viewer/?profileId=ACoAADR88xYBNB3GR2HYxBB7IL4ffvX7Pwh-Xn0" class="text-white">Resume</a>
       </div>
     </nav>
   </header>
