@@ -68,7 +68,7 @@ export default {
         <p>{{ project.description }}</p>
       </div>
       <div class="live_source text-uppercase">
-        <a v-if="project.project_live_url" :href="project.project_live_url" target="_blank" class="text-white text-decoration-none">Go to Github &gt;</a>
+        <a v-if="project.project_live_url" :href="project.project_live_url" target="_blank" class="text-white text-decoration-none">Visit website &gt;</a>
         <a v-if="project.project_source_code" :href="project.project_source_code" target="_blank" class="text-white text-decoration-none">Go to Source Code &gt;</a>
       </div>
     </div>
